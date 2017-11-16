@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title></title>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand"></a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="http://localhost:3000/">Home</a>
+          </li>
+          <li class="active">
+            <a href="http://localhost:3000/signup">Signup</a>
+          </li>
+          <li>
+            <a href="http://localhost:3000/Login">Login</a>
+          </li>
+          <li>
+            <a href="http://localhost:3000/Dash">Dashboard</a>
+          </li>
+          <li>
+            <a href="http://localhost:3000/help">Help Center</a>
+          </li>
+        </ul>
+      </div>
+      <script src="https://code.jquery.com/jquery.min.js"></script>
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </nav>
+<div class="login">
+  <div class="container">
+    <div class="form">
+
+      <h2>Sign up</h2>
+
+      <%= form_for(@user) do |f| %>
+      <%= f.text_field :first_name, :placeholder => "First name" %>
+      <%= f.text_field :last_name, :placeholder => "Last name" %>
+      <%= f.email_field :email, :placeholder => "Email" %>
+      <%= f.password_field :password, :placeholder => "Password" %>
+      <a><%= f.submit "Create an account", class: "btn-submit" %></a>
+      <% end %>
+
+    </div>
+  </div>
+</body>
+</div>
+</html>
